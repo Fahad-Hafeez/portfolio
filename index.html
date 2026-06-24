@@ -1,275 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahad Hafeez | AI Researcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  </head>
 
-<title>Fahad Hafeez | AI Researcher</title>
+  <body>
 
-<link rel="stylesheet" href="style.css">
+    <nav>
+      <div class="logo">FH</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#opensource">Open Source</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme">🌙</button>
+    </nav>
 
-<script defer src="script.js"></script>
-</head>
-
-<body>
-
-<nav>
-<div class="logo">FH</div>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#opensource">Open Source</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#publications">Publications</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<button id="theme-toggle">🌙</button>
-</nav>
-
-<header>
-
-<div class="hero-container">
-
-  <div class="hero-left">
-    <img src="assets/profile.jpg" class="profile">
-  </div>
-
-  <div class="hero-right">
-
-    <h1>Fahad Hafeez</h1>
-
-    <h2 id="typing"></h2>
-
-    <p>
-      Machine Learning Researcher<br>
-      Open Source Contributor<br>
-      Founder @ Khwand
-    </p>
-
-    <div class="hero-buttons">
-      <a class="button" href="assets/cv.pdf">Download CV</a>
-      <a class="button" href="https://github.com/Fahad-Hafeez">GitHub</a>
-      <a class="button" href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ">Scholar</a>
-    </div>
-
-    <div class="hero-badges">
-      <a href="https://orcid.org/0009-0003-7903-7382">
-        <img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid" alt="ORCID">
-      </a>
-      <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ">
-        <img src="https://img.shields.io/badge/Google%20Scholar-4285F4" alt="Google Scholar">
-      </a>
-    </div>
-
-  </div>
-
-</div>
-
-</header>
-
-<section class="metrics hidden">
-
-  <div>
-    <h1 id="papers">0</h1>
-    <p>Publications</p>
-  </div>
-
-  <div>
-    <h1 id="citations">0</h1>
-    <p>Citations</p>
-  </div>
-
-  <div>
-    <h1 id="projects">0</h1>
-    <p>Projects</p>
-  </div>
-
-  <div>
-    <h1 id="opensource">0</h1>
-    <p>OSS Contributions</p>
-  </div>
-
-</section>
-
-<section id="about">
-
-<h2>About</h2>
-
-<p>
-I am an AI & Data Science undergraduate,
-independent AI researcher,
-open-source contributor,
-and startup builder.
-
-My work focuses on machine learning,
-cybersecurity,
-trustworthy AI,
-and scalable intelligent systems.
-</p>
-
-</section>
-
-<section id="research">
-
-<h2>Research Areas</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Machine Learning</h3>
-<p>Supervised learning, predictive modelling and evaluation.</p>
-</div>
-
-<div class="card">
-<h3>Cybersecurity</h3>
-<p>Phishing detection, malware analysis and secure AI.</p>
-</div>
-
-<div class="card">
-<h3>Trustworthy AI</h3>
-<p>Evaluation methodologies and significance-aware benchmarking.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="opensource">
-
-<h2>Open Source</h2>
-
-<div class="card">
-
-<h3>pandas</h3>
-
-<p>
-Merged contribution to pandas improving
-documentation, examples and developer guidance.
-</p>
-
-<a href="#">View Contribution</a>
-
-</div>
-
-</section>
-
-<section id="publications" class="hidden">
-
-  <h2>Featured Publications</h2>
-
-  <div class="cards">
-
-    <div class="pub-card">
-
-      <h3>Significance-Aware Benchmarking</h3>
-
-      <p>
-        Classical Machine Learning
-        for phishing website detection
-      </p>
-
-      <div class="pub-buttons">
-        <a>PDF</a>
-        <a>arXiv</a>
-        <a>DOI</a>
+    <header>
+      <div class="hero-container">
+        <div class="hero-left">
+          <img src="assets/profile.jpg" class="profile">
+        </div>
+        <div class="hero-right">
+          <h1>Fahad Hafeez</h1>
+          <h2 id="typing"></h2>
+          <p>
+            Machine Learning Researcher<br>
+            Open Source Contributor<br>
+            Founder @ Khwand
+          </p>
+          <div class="hero-buttons">
+            <a class="button" href="assets/cv.pdf">Download CV</a>
+            <a class="button" href="https://github.com/Fahad-Hafeez">GitHub</a>
+            <a class="button" href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ">Scholar</a>
+          </div>
+          <div class="hero-badges">
+            <a href="https://orcid.org/0009-0003-7903-7382">
+              <img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid" alt="ORCID">
+            </a>
+            <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ">
+              <img src="https://img.shields.io/badge/Google%20Scholar-4285F4" alt="Google Scholar">
+            </a>
+          </div>
+        </div>
       </div>
+    </header>
 
-    </div>
-
-    <div class="pub-card">
-
-      <h3>Transformer Evaluation Across Cybersecurity Benchmarks</h3>
-
-      <p>
-        Statistical significance-aware
-        comparison of transformer and
-        classical models
-      </p>
-
-      <div class="pub-buttons">
-        <a>PDF</a>
-        <a>arXiv</a>
-        <a>DOI</a>
+    <section class="metrics hidden">
+      <div>
+        <h1 id="papers">0</h1>
+        <p>Publications</p>
       </div>
+      <div>
+        <h1 id="citations">0</h1>
+        <p>Citations</p>
+      </div>
+      <div>
+        <h1 id="projects">0</h1>
+        <p>Projects</p>
+      </div>
+      <div>
+        <h1 id="opensource">0</h1>
+        <p>OSS Contributions</p>
+      </div>
+    </section>
 
-    </div>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am an AI & Data Science undergraduate,
+        independent AI researcher,
+        open-source contributor,
+        and startup builder.
+        My work focuses on machine learning,
+        cybersecurity,
+        trustworthy AI,
+        and scalable intelligent systems.
+      </p>
+    </section>
 
-  </div>
+    <section id="research">
+      <h2>Research Areas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Machine Learning</h3>
+          <p>Supervised learning, predictive modelling and evaluation.</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity</h3>
+          <p>Phishing detection, malware analysis and secure AI.</p>
+        </div>
+        <div class="card">
+          <h3>Trustworthy AI</h3>
+          <p>Evaluation methodologies and significance-aware benchmarking.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section id="opensource">
+      <h2>Open Source</h2>
+      <div class="card">
+        <h3>pandas</h3>
+        <p>
+          Merged contribution to pandas improving
+          documentation, examples and developer guidance.
+        </p>
+        <a href="#">View Contribution</a>
+      </div>
+    </section>
 
-<section class="hidden">
+    <section id="publications" class="hidden">
+      <h2>Featured Publications</h2>
+      <div class="cards">
+        <div class="pub-card">
+          <h3>Significance-Aware Benchmarking</h3>
+          <p>
+            Classical Machine Learning
+            for phishing website detection
+          </p>
+          <div class="pub-buttons">
+            <a>PDF</a>
+            <a>arXiv</a>
+            <a>DOI</a>
+          </div>
+        </div>
+        <div class="pub-card">
+          <h3>Transformer Evaluation Across Cybersecurity Benchmarks</h3>
+          <p>
+            Statistical significance-aware
+            comparison of transformer and
+            classical models
+          </p>
+          <div class="pub-buttons">
+            <a>PDF</a>
+            <a>arXiv</a>
+            <a>DOI</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2>Latest Writing</h2>
+    <section class="hidden">
+      <h2>Latest Writing</h2>
+      <div class="cards">
+        <div class="blog-card">
+          <h3>How I got my first PR merged into pandas</h3>
+          <p>7 minute read</p>
+        </div>
+        <div class="blog-card">
+          <h3>Statistical Significance in Machine Learning</h3>
+          <p>12 minute read</p>
+        </div>
+        <div class="blog-card">
+          <h3>Building an AI startup while studying</h3>
+          <p>5 minute read</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="cards">
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>SQL</span>
+        <span>Pandas</span>
+        <span>Scikit-Learn</span>
+        <span>Cybersecurity</span>
+        <span>C#</span>
+        <span>Data Science</span>
+        <span>FastAPI</span>
+        <span>Git</span>
+      </div>
+    </section>
 
-    <div class="blog-card">
-      <h3>How I got my first PR merged into pandas</h3>
-      <p>7 minute read</p>
-    </div>
+    <section id="timeline" class="hidden">
+      <h2>Journey</h2>
+      <div class="timeline">
+        <div>2025 Khwand Founded</div>
+        <div>2026 First pandas Contribution</div>
+        <div>2026 Independent ML Research</div>
+        <div>2026 Open Source Contributor (pandas)</div>
+      </div>
+    </section>
 
-    <div class="blog-card">
-      <h3>Statistical Significance in Machine Learning</h3>
-      <p>12 minute read</p>
-    </div>
+    <section class="hidden">
+      <h2>GitHub Activity</h2>
+      <img src="https://ghchart.rshah.org/Fahad-Hafeez" class="graph">
+    </section>
 
-    <div class="blog-card">
-      <h3>Building an AI startup while studying</h3>
-      <p>5 minute read</p>
-    </div>
+    <section id="contact" class="hidden">
+      <h2>Connect</h2>
+      <a href="https://github.com/Fahad-Hafeez">GitHub</a>
+      <a href="https://www.linkedin.com/in/fahadhafeezofficial">LinkedIn</a>
+      <a href="https://www.x.com/fahadhafeezoff">X</a>
+      <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ">Scholar</a>
+      <a href="https://orcid.org/0009-0003-7903-7382">ORCID</a>
+    </section>
 
-  </div>
+    <footer>
+      <p>© 2026 Fahad Hafeez</p>
+    </footer>
 
-</section>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/typing.js"></script>
 
-<section id="skills">
+    <div id="particles-js"></div>
 
-<h2>Skills</h2>
-
-<div class="skills">
-<span>Python</span>
-<span>Machine Learning</span>
-<span>SQL</span>
-<span>Pandas</span>
-<span>Scikit-Learn</span>
-<span>Cybersecurity</span>
-<span>C#</span>
-<span>Data Science</span>
-<span>FastAPI</span>
-<span>Git</span>
-</div>
-
-</section>
-
-<section id="timeline">
-
-<h2>Journey</h2>
-
-<div class="timeline-item">2026 — Open Source Contributor (pandas)</div>
-<div class="timeline-item">2026 — Independent AI Researcher</div>
-<div class="timeline-item">2025 — Co-Founder, Khwand</div>
-<div class="timeline-item">2025 — UCLan AI & Data Science</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: fahadhafeez650@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/fahadhafeezofficial</p>
-<p>GitHub: github.com/Fahad-Hafeez</p>
-
-</section>
-
-<footer>
-<p>© 2026 Fahad Hafeez</p>
-</footer>
-
-<script src="js/typing.js"></script>
-
-</body>
+  </body>
 </html>
