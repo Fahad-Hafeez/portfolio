@@ -1,312 +1,641 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fahad Hafeez | AI Researcher</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<link rel="stylesheet" href="style.css">
+<title>
 
-<script defer src="script.js"></script>
+Fahad Hafeez | Machine Learning Researcher • Founder
+
+</title>
+
+
+<link rel="icon" href="assets/favicon.png">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+
 </head>
+
+
 
 <body>
 
+
+
+<div id="particles-js"></div>
+
+
+
 <nav>
-<div class="logo">FH</div>
+
+
+<div class="logo">
+
+FH
+
+</div>
+
+
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#opensource">Open Source</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#publications">Publications</a></li>
-<li><a href="#contact">Contact</a></li>
+
+
+<li>
+
+<a href="#about">
+
+About
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#research">
+
+Research
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#timeline">
+
+Timeline
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+</li>
+
+
 </ul>
 
-<button id="theme-toggle">🌙</button>
+
+
+<button id="theme">
+
+🌙
+
+</button>
+
+
 </nav>
+
+
+
 
 <header>
 
-<div class="hero">
 
-<img src="assets/profile.jpg" alt="Profile">
 
-<h1>Fahad Hafeez</h1>
+<img src="assets/profile.jpg">
 
-<h2>
-AI Researcher • Open Source Contributor • Startup Founder
+
+<h1>
+
+Fahad Hafeez
+
+</h1>
+
+
+
+<h2 id="typing">
+
 </h2>
 
+
+
 <p>
-Artificial Intelligence & Data Science student at UCLan
-working across machine learning, cybersecurity,
-open source software and startup innovation.
+
+Independent AI researcher,
+
+Open Source Contributor,
+
+Founder at Khwand,
+
+and AI & Data Science undergraduate
+
+at UCLan.
+
+
 </p>
 
-<div class="buttons">
 
-<a href="assets/cv.pdf" class="btn">
-Download CV
+
+
+<div>
+
+
+<a class="button"
+
+href="assets/cv.pdf">
+
+CV
+
 </a>
 
-<a href="https://github.com/YOURUSERNAME" class="btn">
+
+
+<a class="button"
+
+href="https://github.com/Fahad-Hafeez">
+
+
 GitHub
+
+
 </a>
 
-<a href="https://linkedin.com/in/fahadhafeezofficial" class="btn">
+
+
+<a class="button"
+
+href="https://www.linkedin.com/in/fahadhafeezofficial">
+
+
 LinkedIn
+
+
 </a>
 
-</div>
 
 </div>
+
+
 
 </header>
 
-<section id="about">
 
-<h2>About</h2>
+
+
+
+<section class="hidden">
+
+
+
+<div class="terminal">
+
+
+<div class="bar">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+
+
+<pre>
+
+
+
+$ whoami
+
+
+Fahad Hafeez
+
+
+
+$ education
+
+
+University of Central Lancashire
+
+
+
+$ research
+
+
+Machine Learning
+
+Cybersecurity
+
+Trustworthy AI
+
+
+
+
+$ startup
+
+
+Khwand
+
+
+
+
+$ open_source
+
+
+pandas
+
+
+
+
+$ languages
+
+
+Python
+
+SQL
+
+C#
+
+
+
+
+</pre>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section id="research"
+
+class="hidden">
+
+
+
+<h2>
+
+Research
+
+</h2>
+
+
+
+
+<div class="cards">
+
+
+
+
+<div class="card">
+
+
+Machine Learning
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+Cybersecurity
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+Trustworthy AI
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="stats hidden">
+
+
+
+<div>
+
+<h1 id="papers">
+
+0
+
+</h1>
+
 
 <p>
-I am an AI & Data Science undergraduate,
-independent AI researcher,
-open-source contributor,
-and startup builder.
 
-My work focuses on machine learning,
-cybersecurity,
-trustworthy AI,
-and scalable intelligent systems.
+Publications
+
 </p>
 
-</section>
 
-<section class="stats">
-
-<div class="stat">
-<h3 id="papers">0</h3>
-<p>Research Papers</p>
-</div>
-
-<div class="stat">
-<h3 id="projectsCount">0</h3>
-<p>Projects</p>
-</div>
-
-<div class="stat">
-<h3 id="oss">0</h3>
-<p>Open Source Contributions</p>
-</div>
-
-</section>
-
-<section id="research">
-
-<h2>Research Areas</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Machine Learning</h3>
-<p>Supervised learning, predictive modelling and evaluation.</p>
-</div>
-
-<div class="card">
-<h3>Cybersecurity</h3>
-<p>Phishing detection, malware analysis and secure AI.</p>
-</div>
-
-<div class="card">
-<h3>Trustworthy AI</h3>
-<p>Evaluation methodologies and significance-aware benchmarking.</p>
-</div>
 
 </div>
 
-</section>
 
-<section id="opensource">
 
-<h2>Open Source</h2>
 
-<div class="card">
 
-<h3>pandas</h3>
+<div>
+
+
+<h1 id="projects">
+
+0
+
+</h1>
+
 
 <p>
-Merged contribution to pandas improving
-documentation, examples and developer guidance.
+
+Projects
+
+
 </p>
 
-<a href="#">
-View Contribution
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+
+<h1 id="opensource">
+
+0
+
+</h1>
+
+
+
+<p>
+
+Open Source
+
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<section id="timeline"
+
+class="hidden">
+
+
+
+<h2>
+
+Journey
+
+</h2>
+
+
+
+
+<div class="timeline">
+
+
+
+<div>
+
+2025
+
+
+Khwand Founded
+
+
+</div>
+
+
+
+
+<div>
+
+2026
+
+
+First pandas Contribution
+
+
+</div>
+
+
+
+
+<div>
+
+2026
+
+
+Independent ML Research
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="hidden">
+
+
+
+<h2>
+
+GitHub Activity
+
+
+</h2>
+
+
+
+
+<img
+
+src="https://ghchart.rshah.org/Fahad-Hafeez"
+
+class="graph"
+
+>
+
+
+
+
+</section>
+
+
+
+
+
+<section id="contact"
+
+class="hidden">
+
+
+
+<h2>
+
+Connect
+
+
+</h2>
+
+
+
+<a
+
+href="https://github.com/Fahad-Hafeez"
+
+>
+
+GitHub
+
+
 </a>
 
-</div>
+
+
+<a
+
+href="https://www.linkedin.com/in/fahadhafeezofficial"
+
+>
+
+LinkedIn
+
+
+</a>
+
+
+
+
+<a
+
+href="https://www.x.com/fahadhafeezoff"
+
+>
+
+X
+
+
+</a>
+
+
+
+
+<a
+
+href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ"
+
+>
+
+Scholar
+
+
+</a>
+
+
+
+
+<a
+
+href="https://orcid.org/0009-0003-7903-7382"
+
+>
+
+ORCID
+
+
+</a>
+
+
+
 
 </section>
 
-<section id="projects">
 
-<h2>Projects</h2>
 
-<div class="grid">
 
-<div class="card">
-<h3>Khwand</h3>
 
-<p>
-AI-powered self-healing CI/CD platform
-for AI-native engineering teams.
-</p>
+<script src="js/particles.js"></script>
 
-</div>
 
-<div class="card">
-<h3>Phishing Detection</h3>
+<script src="js/animations.js"></script>
 
-<p>
-Classical ML and transformer-based
-phishing website detection research.
-</p>
 
-</div>
+<script src="js/counters.js"></script>
 
-<div class="card">
-<h3>Malware Classification</h3>
 
-<p>
-Feature ablation and deployment-aware
-evaluation metrics.
-</p>
+<script src="js/darkmode.js"></script>
 
-</div>
 
-</div>
 
-</section>
-
-<section id="publications">
-
-<h2>Publications</h2>
-
-<div class="publication">
-
-<h3>
-Significance-Aware Benchmarking of Classical Machine Learning Classifiers for Phishing Website Detection
-</h3>
-
-<p>
-Machine learning evaluation with statistical significance testing.
-</p>
-
-</div>
-
-<div class="publication">
-
-<h3>
-Significance-Aware Evaluation of Classical and Transformer Classifiers Across Cybersecurity and Financial Benchmarks
-</h3>
-
-</div>
-
-<div class="publication">
-
-<h3>
-Geometric Intuitions for Linear Algebra
-</h3>
-
-</div>
-
-<div class="publication">
-
-<h3>
-Dissecting Detection
-</h3>
-
-</div>
-
-<div class="publication">
-
-<h3>
-Linguistic Deception Signatures
-</h3>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<span>Python</span>
-<span>Machine Learning</span>
-<span>SQL</span>
-<span>Pandas</span>
-<span>Scikit-Learn</span>
-<span>Cybersecurity</span>
-<span>C#</span>
-<span>Data Science</span>
-<span>FastAPI</span>
-<span>Git</span>
-
-</div>
-
-</section>
-
-<section id="timeline">
-
-<h2>Journey</h2>
-
-<div class="timeline-item">
-2026 — Open Source Contributor (pandas)
-</div>
-
-<div class="timeline-item">
-2026 — Independent AI Researcher
-</div>
-
-<div class="timeline-item">
-2025 — Co-Founder, Khwand
-</div>
-
-<div class="timeline-item">
-2025 — UCLan AI & Data Science
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: fahadhafeez650@gmail.com</p>
-
-<p>
-LinkedIn:
-linkedin.com/in/fahadhafeezofficial
-</p>
-
-<p>
-GitHub:
-github.com/YOURUSERNAME
-</p>
-
-</section>
-
-<footer>
-
-<p>
-© 2026 Fahad Hafeez
-</p>
-
-</footer>
 
 </body>
+
+
 </html>
