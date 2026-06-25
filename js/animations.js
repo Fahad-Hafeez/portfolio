@@ -1,6 +1,6 @@
-/* animations.js — scroll reveals + mobile nav */
+/* animations.js — scroll reveals + mobile nav + mouse spotlight + navbar scroll */
 
-// ── Scroll reveal ──────────────────────────────────────────
+// ── Scroll reveal with IntersectionObserver ────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -13,7 +13,7 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.reveal').forEach((el) => {
+document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => {
   revealObserver.observe(el);
 });
 
@@ -47,35 +47,39 @@ if (navToggle && navLinks) {
   });
 }
 
-// ── Navbar shadow on scroll ────────────────────────────────
-const navbar = document.getElementById('navbar');
+// ── Scroll progress bar ────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
 
-function updateScrollProgress() {
+// ── Navbar scroll effect (transparent → glass) ─────────────
+const navbar = document.getElementById('navbar');
+
+function updateScrollEffects() {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
   if (progressBar) {
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
     progressBar.style.width = `${Math.min(progress, 100)}%`;
   }
 
   if (navbar) {
-    navbar.style.borderBottomColor =
-      window.scrollY > 10
-        ? 'rgba(94, 163, 255, 0.18)'
-        : 'rgba(94, 163, 255, 0.11)';
+    if (scrollTop > 20) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   }
 }
 
-window.addEventListener('scroll', updateScrollProgress, { passive: true });
-window.addEventListener('load', updateScrollProgress);
+window.addEventListener('scroll', updateScrollEffects, { passive: true });
+window.addEventListener('load', updateScrollEffects);
 
 // ── Active nav link by section ─────────────────────────────
 const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
-const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
+const sections = Array.from(document.querySelectorAll('section[id]'));
 
 function updateActiveLink() {
-  const scrollY = window.scrollY + 120;
+  const scrollY = window.scrollY + 140;
   let currentId = 'home';
 
   sections.forEach((section) => {
@@ -86,10 +90,31 @@ function updateActiveLink() {
 
   navAnchors.forEach((link) => {
     const target = link.getAttribute('href')?.replace('#', '');
-    const isActive = target === '' ? currentId === 'home' : currentId === target;
-    link.classList.toggle('active', isActive);
+    link.classList.toggle('active', target === currentId);
   });
 }
 
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 window.addEventListener('load', updateActiveLink);
+
+// ── Mouse spotlight effect ─────────────────────────────────
+const spotlight = document.getElementById('mouse-spotlight');
+
+if (spotlight) {
+  document.addEventListener('mousemove', (e) => {
+    spotlight.style.left = e.clientX + 'px';
+    spotlight.style.top = e.clientY + 'px';
+    spotlight.style.opacity = '1';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    spotlight.style.opacity = '0';
+  });
+}
+
+// ── Initialize Lucide icons after DOM load ─────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+});

@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Fahad Hafeez</title>
+    <meta name="description" content="Peer-reviewed research publications by Fahad Hafeez spanning machine learning, cybersecurity and trustworthy AI evaluation.">
     <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Publications | Fahad Hafeez">
+    <meta property="og:description" content="Peer-reviewed research publications by Fahad Hafeez spanning machine learning, cybersecurity and trustworthy AI evaluation.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/darkmode.js" defer></script>
     <script src="js/animations.js" defer></script>
@@ -13,20 +27,33 @@
   <body>
     <div id="scroll-progress" aria-hidden="true"></div>
 
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb-blue"></div>
+      <div class="orb orb-indigo"></div>
+    </div>
+
+    <div id="mouse-spotlight" aria-hidden="true"></div>
+
     <nav id="navbar">
       <a href="index.html" class="logo" aria-label="Home">FH</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#research">Research</a></li>
-        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="index.html#khwand">Khwand AI</a></li>
+        <li><a href="index.html#datasets">Datasets</a></li>
         <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="index.html#opensource">Open Source</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <button class="theme-btn" id="theme" aria-label="Toggle colour theme">🌙</button>
+      <div class="nav-icons">
+        <a href="https://github.com/Fahad-Hafeez" class="nav-icon" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+        <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ" class="nav-icon" target="_blank" rel="noopener" aria-label="Google Scholar"><i data-lucide="graduation-cap" style="width:18px;height:18px"></i></a>
+        <a href="https://huggingface.co/khwand-ai" class="nav-icon" target="_blank" rel="noopener" aria-label="HuggingFace"><i data-lucide="smile" style="width:18px;height:18px"></i></a>
+        <button class="theme-btn" id="theme" aria-label="Toggle colour theme"><i data-lucide="sun" style="width:16px;height:16px" class="theme-icon-light"></i><i data-lucide="moon" style="width:16px;height:16px" class="theme-icon-dark"></i></button>
+      </div>
     </nav>
 
     <header class="page-hero">
@@ -37,47 +64,110 @@
       </div>
     </header>
 
-    <section class="section reveal">
+    <section class="section">
       <div class="section-inner">
         <h2 class="section-title">Publications</h2>
-        <div class="pub-list">
-          <div class="pub-card card">
+        <p class="section-subtitle">Peer-reviewed research across machine learning, cybersecurity and trustworthy AI evaluation.</p>
+        <div class="pub-grid reveal">
+
+          <div class="glass-card pub-card">
             <div class="pub-tags">
-              <span class="tag">Cybersecurity</span><span class="tag">Machine Learning</span><span class="tag">Benchmarking</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Benchmarking</span>
             </div>
-            <h3><i class="fa-solid fa-file-lines"></i> Significance-Aware Benchmarking of Classical Machine Learning Classifiers for Phishing Website Detection</h3>
+            <h3>Significance-Aware Benchmarking of Classical Machine Learning Classifiers for Phishing Website Detection</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE Access</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 3</span>
+            </div>
             <div class="pub-links">
-              <a href="#" class="pub-btn">PDF</a><a href="#" class="pub-btn">arXiv</a><a href="#" class="pub-btn">DOI</a>
+              <a href="#" class="btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
+              <a href="#" class="btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
             </div>
           </div>
 
-          <div class="pub-card card">
+          <div class="glass-card pub-card">
             <div class="pub-tags">
-              <span class="tag">Cybersecurity</span><span class="tag">Transformers</span><span class="tag">Tabular Benchmarks</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">Tabular Benchmarks</span>
             </div>
-            <h3><i class="fa-solid fa-shield-halved"></i> Significance-Aware Evaluation of Classical and Transformer Classifiers Across Cybersecurity and Financial Tabular Benchmarks</h3>
+            <h3>Significance-Aware Evaluation of Classical and Transformer Classifiers Across Cybersecurity and Financial Tabular Benchmarks</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">arXiv</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 2</span>
+            </div>
             <div class="pub-links">
-              <a href="#" class="pub-btn">PDF</a><a href="#" class="pub-btn">arXiv</a><a href="#" class="pub-btn">DOI</a>
+              <a href="#" class="btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
+              <a href="#" class="btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
             </div>
           </div>
 
-          <div class="pub-card card">
+          <div class="glass-card pub-card">
             <div class="pub-tags">
-              <span class="tag">Mathematics</span><span class="tag">Linear Algebra</span><span class="tag">Education</span>
+              <span class="tag">Mathematics</span>
+              <span class="tag">Linear Algebra</span>
+              <span class="tag">Education</span>
             </div>
-            <h3><i class="fa-solid fa-calculator"></i> Geometric Intuitions for Linear Algebra: A Derivation-First Introduction for Machine Learning Practitioners</h3>
+            <h3>Geometric Intuitions for Linear Algebra: A Derivation-First Introduction for Machine Learning Practitioners</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">arXiv</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
+            </div>
             <div class="pub-links">
-              <a href="#" class="pub-btn">PDF</a><a href="#" class="pub-btn">arXiv</a><a href="#" class="pub-btn">DOI</a>
+              <a href="#" class="btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
+              <a href="#" class="btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
             </div>
           </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">Malware</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Feature Analysis</span>
+            </div>
+            <h3>Dissecting Detection: Feature-Class Ablation and a Deployment-Aware Evaluation Metric for Static PE Malware Classifiers</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">arXiv</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
+            </div>
+            <div class="pub-links">
+              <a href="#" class="btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
+              <a href="#" class="btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
+            </div>
+          </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Spam Detection</span>
+              <span class="tag">Classical NLP</span>
+            </div>
+            <h3>Linguistic Deception Signatures for Cross-Corpus Spam Detection with Classical NLP</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">arXiv</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
+            </div>
+            <div class="pub-links">
+              <a href="#" class="btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
+              <a href="#" class="btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <footer>
       <p>
-        © 2026 Fahad Hafeez ·
-        <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> ·
+        &copy; 2026 Fahad Hafeez &nbsp;&middot;&nbsp;
+        <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
         <a href="https://www.linkedin.com/in/fahadhafeezofficial" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </footer>

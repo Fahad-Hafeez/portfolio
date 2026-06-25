@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Fahad Hafeez</title>
+    <meta name="description" content="Writing on AI research, open source, and building thoughtfully. Notes and reflections from Fahad Hafeez.">
     <link rel="icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/darkmode.js" defer></script>
     <script src="js/animations.js" defer></script>
@@ -13,20 +22,33 @@
   <body>
     <div id="scroll-progress" aria-hidden="true"></div>
 
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb-blue"></div>
+      <div class="orb orb-indigo"></div>
+    </div>
+
+    <div id="mouse-spotlight" aria-hidden="true"></div>
+
     <nav id="navbar">
       <a href="index.html" class="logo" aria-label="Home">FH</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#research">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#khwand">Khwand AI</a></li>
+        <li><a href="index.html#datasets">Datasets</a></li>
         <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#opensource">Open Source</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <button class="theme-btn" id="theme" aria-label="Toggle colour theme">🌙</button>
+      <div class="nav-icons">
+        <a href="https://github.com/Fahad-Hafeez" class="nav-icon" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+        <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ" class="nav-icon" target="_blank" rel="noopener" aria-label="Google Scholar"><i data-lucide="graduation-cap" style="width:18px;height:18px"></i></a>
+        <a href="https://huggingface.co/khwand-ai" class="nav-icon" target="_blank" rel="noopener" aria-label="HuggingFace"><i data-lucide="smile" style="width:18px;height:18px"></i></a>
+        <button class="theme-btn" id="theme" aria-label="Toggle colour theme"><i data-lucide="sun" style="width:16px;height:16px" class="theme-icon-light"></i><i data-lucide="moon" style="width:16px;height:16px" class="theme-icon-dark"></i></button>
+      </div>
     </nav>
 
     <header class="page-hero">
@@ -37,35 +59,37 @@
       </div>
     </header>
 
-    <section class="section reveal">
+    <section class="section">
       <div class="section-inner">
         <h2 class="section-title">Latest posts</h2>
-        <div class="grid-2">
-          <article class="card page-card">
+        <div class="grid-2 reveal">
+
+          <article class="glass-card page-card">
             <span class="tag">Open Source</span>
-            <h3><i class="fa-solid fa-code-branch"></i> How I Got My First PR Merged Into pandas</h3>
+            <h3><i data-lucide="git-pull-request" style="width:16px;height:16px"></i> How I Got My First PR Merged Into pandas</h3>
             <p>A practical walkthrough of contributing to pandas, navigating CI, and turning a small doc fix into a meaningful first step.</p>
             <div class="pub-links">
-              <a href="#" class="pub-btn">7 min read</a>
+              <a href="#" class="btn-sm">7 min read</a>
             </div>
           </article>
 
-          <article class="card page-card">
+          <article class="glass-card page-card">
             <span class="tag">Research</span>
-            <h3><i class="fa-solid fa-chart-line"></i> Building a Reproducible Benchmarking Workflow</h3>
+            <h3><i data-lucide="chart-line" style="width:16px;height:16px"></i> Building a Reproducible Benchmarking Workflow</h3>
             <p>Reflections on reliability, statistical significance, and making machine learning evaluations more trustworthy.</p>
             <div class="pub-links">
-              <a href="#" class="pub-btn">6 min read</a>
+              <a href="#" class="btn-sm">6 min read</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
     <footer>
       <p>
-        © 2026 Fahad Hafeez ·
-        <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> ·
+        &copy; 2026 Fahad Hafeez &nbsp;&middot;&nbsp;
+        <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
         <a href="https://www.linkedin.com/in/fahadhafeezofficial" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </footer>

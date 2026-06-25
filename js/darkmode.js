@@ -1,4 +1,4 @@
-/* darkmode.js — dark / light theme toggle */
+/* darkmode.js — dark / light theme toggle with Lucide icons */
 
 const themeBtn = document.getElementById('theme');
 
@@ -9,22 +9,10 @@ const themeBtn = document.getElementById('theme');
   }
 })();
 
-function updateIcon() {
-  if (!themeBtn) return;
-  themeBtn.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
-  themeBtn.setAttribute(
-    'aria-label',
-    document.body.classList.contains('light') ? 'Switch to dark mode' : 'Switch to light mode'
-  );
-}
-
 if (themeBtn) {
-  updateIcon();
-
   themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     const isLight = document.body.classList.contains('light');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    updateIcon();
   });
 }

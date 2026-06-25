@@ -1,11 +1,12 @@
 /* typing.js — typewriter animation */
 
 const phrases = [
-  'Independent AI/ML Researcher',
-  'Open Source Contributor (pandas)',
-  'Co-Founder @ Khwand',
-  'Cybersecurity Researcher',
-  'BSc AI & Data Science @ UCLan',
+  'AI Researcher',
+  'Startup Founder',
+  'Dataset Creator',
+  'Open Source Builder',
+  'Machine Learning Engineer',
+  'Trustworthy AI Advocate',
 ];
 
 let phraseIndex  = 0;
@@ -13,9 +14,9 @@ let charIndex    = 0;
 let isDeleting   = false;
 let isPaused     = false;
 
-const TYPING_SPEED   = 75;   // ms per character typed
-const DELETING_SPEED = 38;   // ms per character deleted
-const PAUSE_AFTER    = 1800; // ms to hold the completed phrase
+const TYPING_SPEED   = 70;   // ms per character typed
+const DELETING_SPEED = 35;   // ms per character deleted
+const PAUSE_AFTER    = 2200; // ms to hold the completed phrase
 
 function tick() {
   const el = document.getElementById('typing');
@@ -57,4 +58,4 @@ function tick() {
 }
 
 // Small initial delay before starting
-setTimeout(tick, 600);
+setTimeout(tick, 800);

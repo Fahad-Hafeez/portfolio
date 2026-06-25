@@ -26,7 +26,7 @@ function animateCounter(id, target, duration = 1400) {
   requestAnimationFrame(step);
 }
 
-// ── Trigger counters when the metrics bar enters view ─────
+// ── Trigger counters when the metrics strip enters view ─────
 const metricsEl = document.querySelector('.metrics');
 
 if (metricsEl) {
@@ -34,10 +34,10 @@ if (metricsEl) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateCounter('papers',         5);
-          animateCounter('citations',      0);
-          animateCounter('projects-count', 15);
-          animateCounter('opensource',     1);
+          animateCounter('m-pubs',  17);
+          animateCounter('m-data',  8);
+          animateCounter('m-proj',  25);
+          animateCounter('m-stars', 1400, 2000);
           counterObserver.unobserve(entry.target);
         }
       });
