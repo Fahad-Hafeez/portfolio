@@ -1,51 +1,60 @@
-const text = [
-"Independant AI/Machine Learning Researcher",
-"Open Source Contributor",
-"Founder @ Khwand",
-"Cybersecurity Enthusiast"
+/* typing.js — typewriter animation */
+
+const phrases = [
+  'Independent AI/ML Researcher',
+  'Open Source Contributor (pandas)',
+  'Co-Founder @ Khwand',
+  'Cybersecurity Researcher',
+  'BSc AI & Data Science @ UCLan',
 ];
 
-let i = 0;
-let j = 0;
-let current = "";
-let deleting = false;
+let phraseIndex  = 0;
+let charIndex    = 0;
+let isDeleting   = false;
+let isPaused     = false;
 
-function type() {
+const TYPING_SPEED   = 75;   // ms per character typed
+const DELETING_SPEED = 38;   // ms per character deleted
+const PAUSE_AFTER    = 1800; // ms to hold the completed phrase
 
-let el = document.getElementById("typing");
+function tick() {
+  const el = document.getElementById('typing');
+  if (!el) return;
 
-if(!deleting){
+  const currentPhrase = phrases[phraseIndex];
 
-current = text[i].substring(0,j++);
+  if (isPaused) {
+    isPaused    = false;
+    isDeleting  = true;
+    setTimeout(tick, DELETING_SPEED);
+    return;
+  }
 
-}else{
+  if (isDeleting) {
+    charIndex--;
+    el.textContent = currentPhrase.slice(0, charIndex);
 
-current = text[i].substring(0,j--);
+    if (charIndex === 0) {
+      isDeleting   = false;
+      phraseIndex  = (phraseIndex + 1) % phrases.length;
+      setTimeout(tick, 400); // brief pause before next phrase
+      return;
+    }
 
+    setTimeout(tick, DELETING_SPEED);
+  } else {
+    charIndex++;
+    el.textContent = currentPhrase.slice(0, charIndex);
+
+    if (charIndex === currentPhrase.length) {
+      isPaused = true;
+      setTimeout(tick, PAUSE_AFTER);
+      return;
+    }
+
+    setTimeout(tick, TYPING_SPEED);
+  }
 }
 
-el.innerHTML = current;
-
-if(j===text[i].length+1){
-
-deleting=true;
-
-setTimeout(type,1500);
-
-return;
-
-}
-
-if(j===0){
-
-deleting=false;
-
-i=(i+1)%text.length;
-
-}
-
-setTimeout(type,deleting?40:80);
-
-}
-
-type();
+// Small initial delay before starting
+setTimeout(tick, 600);
