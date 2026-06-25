@@ -49,12 +49,47 @@ if (navToggle && navLinks) {
 
 // ── Navbar shadow on scroll ────────────────────────────────
 const navbar = document.getElementById('navbar');
+const progressBar = document.getElementById('scroll-progress');
 
-window.addEventListener('scroll', () => {
+function updateScrollProgress() {
+  if (progressBar) {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressBar.style.width = `${Math.min(progress, 100)}%`;
+  }
+
   if (navbar) {
     navbar.style.borderBottomColor =
       window.scrollY > 10
         ? 'rgba(94, 163, 255, 0.18)'
         : 'rgba(94, 163, 255, 0.11)';
   }
-}, { passive: true });
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+window.addEventListener('load', updateScrollProgress);
+
+// ── Active nav link by section ─────────────────────────────
+const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
+
+function updateActiveLink() {
+  const scrollY = window.scrollY + 120;
+  let currentId = 'home';
+
+  sections.forEach((section) => {
+    if (scrollY >= section.offsetTop) {
+      currentId = section.id;
+    }
+  });
+
+  navAnchors.forEach((link) => {
+    const target = link.getAttribute('href')?.replace('#', '');
+    const isActive = target === '' ? currentId === 'home' : currentId === target;
+    link.classList.toggle('active', isActive);
+  });
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+window.addEventListener('load', updateActiveLink);

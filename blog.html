@@ -1,15 +1,72 @@
-<div class="blog-card">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Fahad Hafeez</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/animations.js" defer></script>
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-<h3>
+    <nav id="navbar">
+      <a href="index.html" class="logo" aria-label="Home">FH</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-btn" id="theme" aria-label="Toggle colour theme">🌙</button>
+    </nav>
 
-How I Got My First PR Merged Into pandas
+    <header class="page-hero">
+      <div class="section-inner">
+        <span class="hero-eyebrow">Notes & reflections</span>
+        <h1 class="hero-name">Writing on research, open source, and building thoughtfully.</h1>
+        <p class="hero-bio page-intro">A small archive of ideas, experiments, and lessons from engineering and research work.</p>
+      </div>
+    </header>
 
-</h3>
+    <section class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-title">Latest posts</h2>
+        <div class="grid-2">
+          <article class="card page-card">
+            <span class="tag">Open Source</span>
+            <h3>How I Got My First PR Merged Into pandas</h3>
+            <p>A practical walkthrough of contributing to pandas, navigating CI, and turning a small doc fix into a meaningful first step.</p>
+            <div class="pub-links">
+              <a href="#" class="pub-btn">7 min read</a>
+            </div>
+          </article>
 
-<p>
+          <article class="card page-card">
+            <span class="tag">Research</span>
+            <h3>Building a Reproducible Benchmarking Workflow</h3>
+            <p>Reflections on reliability, statistical significance, and making machine learning evaluations more trustworthy.</p>
+            <div class="pub-links">
+              <a href="#" class="pub-btn">6 min read</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-7 min read
-
-</p>
-
-</div>
+    <footer>
+      <p>
+        © 2026 Fahad Hafeez ·
+        <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/fahadhafeezofficial" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </footer>
+  </body>
+</html>
