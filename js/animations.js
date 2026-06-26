@@ -49,6 +49,8 @@ if (navToggle && navLinks) {
 
 // ── Scroll progress bar ────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
+// Tooltip element for showing percentage
+const progressTooltip = document.getElementById('scroll-tooltip');
 
 // ── Navbar scroll effect (transparent → glass) ─────────────
 const navbar = document.getElementById('navbar');
@@ -59,7 +61,18 @@ function updateScrollEffects() {
   const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
 
   if (progressBar) {
-    progressBar.style.width = `${Math.min(progress, 100)}%`;
+    const pct = Math.round(Math.min(progress, 100));
+    progressBar.style.width = `${pct}%`;
+    // Update tooltip text and position
+    if (progressTooltip) {
+      progressTooltip.textContent = `${pct}%`;
+      // Position tooltip centered over the current width of the bar
+      const barRect = progressBar.getBoundingClientRect();
+      const tooltipX = barRect.left + barRect.width / 2;
+      progressTooltip.style.left = `${tooltipX}px`;
+      // Show tooltip only when progress > 0
+      progressTooltip.style.opacity = pct > 0 ? '1' : '0';
+    }
   }
 
   if (navbar) {
@@ -71,8 +84,28 @@ function updateScrollEffects() {
   }
 }
 
+// ── Navbar shrink on scroll direction ───────────────────────
+let lastScrollY = 0;
+function handleNavbarShrink() {
+  if (!navbar) return;
+  const currentY = window.scrollY;
+  if (currentY > lastScrollY && currentY > 100) {
+    // scrolling down
+    navbar.classList.add('shrink');
+  } else if (currentY < lastScrollY) {
+    // scrolling up
+    navbar.classList.remove('shrink');
+  }
+  if (currentY === 0) {
+    navbar.classList.remove('shrink');
+  }
+  lastScrollY = currentY;
+}
+
 window.addEventListener('scroll', updateScrollEffects, { passive: true });
 window.addEventListener('load', updateScrollEffects);
+// Attach shrink handler
+window.addEventListener('scroll', handleNavbarShrink, { passive: true });
 
 // ── Active nav link by section ─────────────────────────────
 const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
