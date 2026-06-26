@@ -70,6 +70,8 @@ function updateScrollEffects() {
       const barRect = progressBar.getBoundingClientRect();
       const tooltipX = barRect.left + barRect.width / 2;
       progressTooltip.style.left = `${tooltipX}px`;
+      // Show tooltip only when user has scrolled
+      progressTooltip.style.opacity = pct > 0 ? '1' : '0';
     }
   }
 

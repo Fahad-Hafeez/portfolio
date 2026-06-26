@@ -144,18 +144,20 @@ a:hover { color: var(--primary); }
 /* Tooltip for scroll progress */
 #scroll-tooltip {
   position: fixed;
-  top: 6px; /* slightly below the progress bar */
+  top: 10px;
   left: 0;
-  padding: 2px 6px;
-  font-size: 0.75rem;
-  /* Use the same gradient as the progress bar for visual harmony */
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: var(--text);
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  background: var(--surface-solid);
+  color: var(--primary);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   pointer-events: none;
-  opacity: 1; /* always visible */
-  transition: transform var(--ease);
+  opacity: 0;
+  transition: opacity var(--ease), left 0.05s linear;
   transform: translateX(-50%);
   z-index: 310;
 }
@@ -417,14 +419,14 @@ nav {
   padding: 0 32px;
   background: transparent;
   border-bottom: 1px solid transparent;
-  transition: background var(--ease), border-color var(--ease), backdrop-filter var(--ease);
+  transition: background var(--ease), border-color var(--ease), backdrop-filter var(--ease),
+              height var(--ease), padding var(--ease);
 }
 
 /* Shrink navbar when scrolling down */
 nav.shrink {
-  height: 48px; /* slightly smaller than default */
+  height: 48px;
   padding: 0 24px;
-  transition: height var(--ease), padding var(--ease);
 }
 
 /* Adjust logo size when navbar is shrunk */
