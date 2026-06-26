@@ -21,39 +21,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Research page -->
-  <url>
-    <loc>https://fahad-hafeez.github.io/portfolio/#research</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Datasets page -->
-  <url>
-    <loc>https://fahad-hafeez.github.io/portfolio/#datasets</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Projects page -->
-  <url>
-    <loc>https://fahad-hafeez.github.io/portfolio/#projects</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Open Source page -->
-  <url>
-    <loc>https://fahad-hafeez.github.io/portfolio/#opensource</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Contact page -->
-  <url>
-    <loc>https://fahad-hafeez.github.io/portfolio/#contact</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <!-- Additional static pages (if any) can be added here -->
 </urlset>
