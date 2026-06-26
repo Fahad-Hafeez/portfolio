@@ -23,7 +23,19 @@
     <meta name="twitter:description" content="AI researcher, startup founder and open-source contributor. Founder of Khwand AI, publishing datasets, models and trustworthy AI research.">
     <meta name="twitter:image" content="https://fahadhafeez.com/assets/profile.jpg">
 
-    <link rel="icon" href="assets/favicon.png">
+    <!-- Favicons -->
+    <!-- ICO fallback for older browsers -->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" sizes="any">
+    <!-- PNG icons for modern browsers -->
+    <link rel="icon" href="assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
+    <!-- Android Chrome icons -->
+    <link rel="icon" href="assets/favicon/android-chrome-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="assets/favicon/android-chrome-512x512.png" type="image/png" sizes="512x512">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -180,7 +192,7 @@
 
         <div class="hero-left reveal">
           <!-- Profile picture and name -->
-          <img src="assets/profile.jpg" alt="Fahad Hafeez" class="profile-pic" />
+          <img src="assets/profile.jpg" alt="Fahad Hafeez" class="profile-pic" loading="lazy" />
           <h2 class="hero-name">Fahad Hafeez</h2>
           <span class="hero-badge">AI Researcher &bull; Founder &bull; OSS Builder</span>
 
@@ -799,5 +811,8 @@
       <p>Profiles: GitHub (Fahad-Hafeez), Google Scholar, HuggingFace (khwand-ai), ORCID (0009-0003-7903-7382), LinkedIn</p>
     </div>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top" class="glass-button btn-primary" style="position:fixed;bottom:40px;right:40px;opacity:0;pointer-events:none;z-index:1000;">&#8679;</button>
+  <script src="js/backtotop.js" defer></script>
   </body>
 </html>

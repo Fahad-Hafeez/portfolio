@@ -22,6 +22,7 @@
    19. Footer
    20. Page Hero (blog/publications)
    21. Animations & Reveals
+
    22. Responsive
    ===================================================== */
 
@@ -358,6 +359,15 @@ a:hover { color: var(--primary); }
   75%      { transform: translate(30px, 20px) scale(1.02); }
 }
 
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+}
+
 #mouse-spotlight {
   position: fixed;
   width: 600px;
@@ -536,6 +546,16 @@ header#home {
   width: 100%;
   position: relative;
   z-index: 1;
+  /* Stack vertically on narrow screens */
+  flex-direction: column;
+}
+
+/* Larger screens – place hero content side‑by‑side */
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .hero-left {
@@ -545,6 +565,8 @@ header#home {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  /* Limit width on large screens so text doesn’t stretch too far */
+  max-width: 500px;
 }
 
 /* Profile picture and name styling */
@@ -556,6 +578,20 @@ header#home {
   margin-bottom: 1rem;
   border: 3px solid var(--primary);
   box-shadow: 0 0 12px var(--primary-glow);
+  /* Slightly larger on desktop for better visual balance */
+  @media (min-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Hero right – center the metrics card and give it some breathing room */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-name {
