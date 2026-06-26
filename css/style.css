@@ -148,21 +148,16 @@ a:hover { color: var(--primary); }
   left: 0;
   padding: 2px 6px;
   font-size: 0.75rem;
-  background: var(--surface);
+  /* Use the same gradient as the progress bar for visual harmony */
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: var(--text);
-  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--ease), transform var(--ease);
+  opacity: 1; /* always visible */
+  transition: transform var(--ease);
   transform: translateX(-50%);
   z-index: 310;
-}
-
-/* Show tooltip when progress bar has width > 0 */
-#scroll-progress:not([style*="width: 0"]) + #scroll-tooltip {
-  opacity: 1;
 }
 
 /* 04. Utility Classes */
