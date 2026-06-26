@@ -57,7 +57,7 @@
           "sameAs": [
             "https://github.com/Fahad-Hafeez",
             "https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ",
-            "https://huggingface.co/khwand-ai",
+            "https://huggingface.co/fahadhafeezofficial",
             "https://www.linkedin.com/in/fahadhafeezofficial",
             "https://orcid.org/0009-0003-7903-7382"
           ],
@@ -75,7 +75,7 @@
         },
         {
           "@type": "Dataset",
-          "name": "CyberSecNER",
+          "name": "cissp-llmbench",
           "description": "Named entity recognition dataset for cybersecurity domain",
           "creator": { "@type": "Person", "name": "Fahad Hafeez" }
         },
@@ -187,7 +187,8 @@
       <div class="nav-icons">
         <a href="https://github.com/Fahad-Hafeez" class="nav-icon" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
         <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ" class="nav-icon" target="_blank" rel="noopener" aria-label="Google Scholar"><i data-lucide="graduation-cap" style="width:18px;height:18px"></i></a>
-        <a href="https://huggingface.co/khwand-ai" class="nav-icon" target="_blank" rel="noopener" aria-label="HuggingFace"><i data-lucide="smile" style="width:18px;height:18px"></i></a>
+        <a href="https://huggingface.co/fahadhafeezofficial" class="nav-icon" target="_blank" rel="noopener" aria-label="HuggingFace"><i data-lucide="smile" style="width:18px;height:18px"></i></a>
+        <a href="https://orcid.org/0009-0003-7903-7382" class="nav-icon nav-icon-text" target="_blank" rel="noopener" aria-label="ORCID"><span>OR</span></a>
         <button class="theme-btn" id="theme" aria-label="Toggle colour theme"><i data-lucide="sun" style="width:16px;height:16px" class="theme-icon-light"></i><i data-lucide="moon" style="width:16px;height:16px" class="theme-icon-dark"></i></button>
       </div>
     </nav>
@@ -279,16 +280,16 @@
           <div class="glass-card featured-card">
             <div class="featured-icon"><i data-lucide="file-text" style="width:24px;height:24px"></i></div>
             <span class="featured-tag">Featured Publication</span>
-            <h3>Significance-Aware Benchmarking of Classical ML Classifiers for Phishing Website Detection</h3>
-            <p>Novel benchmarking methodology applying McNemar's test and Cohen's d for rigorous classifier evaluation.</p>
+            <h3>Beyond Alignment: Governing the AI Transition through Redistributive, Institutional, and Normative Co-ordination</h3>
+            <p>Submitted work on governance, institutional coordination and normative frameworks for responsible AI transition.</p>
             <a href="#publications" class="card-link">Read more <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
           </div>
 
           <div class="glass-card featured-card">
             <div class="featured-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
             <span class="featured-tag">Featured Dataset</span>
-            <h3>TrustBench</h3>
-            <p>A comprehensive benchmark dataset for evaluating trustworthy AI systems across multiple dimensions.</p>
+            <h3>safecalib-bench</h3>
+            <p>A benchmark dataset for evaluating safety-critical refusal calibration in instruction-tuned language models.</p>
             <a href="#datasets" class="card-link">View dataset <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
           </div>
 
@@ -347,61 +348,33 @@
       <div class="section-inner">
         <h2 class="section-title">Open Source Datasets</h2>
         <p class="section-subtitle">Datasets published on Hugging Face for experimentation, benchmarking and model development.</p>
-        <div class="grid-4 reveal">
+        <div class="grid-2 reveal">
 
           <div class="glass-card dataset-card">
             <div class="dataset-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
-            <h3>CyberSecNER</h3>
+            <h3>cissp-llmbench</h3>
             <div class="dataset-meta">
               <span class="dataset-task">Named Entity Recognition</span>
-              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> 1.2k</span>
+              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> Cybersecurity</span>
             </div>
-            <p>Cybersecurity domain NER dataset for identifying threats, vulnerabilities and attack vectors in text.</p>
+            <p>Cybersecurity-focused benchmark dataset for identifying threats, vulnerabilities and attack vectors in text.</p>
             <div class="dataset-footer">
-              <span class="dataset-license">MIT</span>
-              <a href="https://huggingface.co/datasets" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> HuggingFace</a>
+              <span class="dataset-license">Open</span>
+              <a href="https://huggingface.co/datasets/fahadhafeezofficial/cissp-llmbench" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> Open dataset</a>
             </div>
           </div>
 
           <div class="glass-card dataset-card">
-            <div class="dataset-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
-            <h3>MedicalQA</h3>
+            <div class="dataset-icon"><i data-lucide="shield-check" style="width:24px;height:24px"></i></div>
+            <h3>safecalib-bench</h3>
             <div class="dataset-meta">
-              <span class="dataset-task">Question Answering</span>
-              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> 800+</span>
+              <span class="dataset-task">Safety &amp; Calibration</span>
+              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> Evaluation</span>
             </div>
-            <p>Medical domain question-answering dataset built for evaluating LLM reliability in clinical contexts.</p>
+            <p>Benchmark dataset for evaluating safety, calibration and robustness of language models in real-world settings.</p>
             <div class="dataset-footer">
-              <span class="dataset-license">Apache 2.0</span>
-              <a href="https://huggingface.co/datasets" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> HuggingFace</a>
-            </div>
-          </div>
-
-          <div class="glass-card dataset-card">
-            <div class="dataset-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
-            <h3>TrustBench</h3>
-            <div class="dataset-meta">
-              <span class="dataset-task">Benchmark Evaluation</span>
-              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> 2.4k</span>
-            </div>
-            <p>Comprehensive benchmark for evaluating trustworthy AI across fairness, robustness and transparency dimensions.</p>
-            <div class="dataset-footer">
-              <span class="dataset-license">MIT</span>
-              <a href="https://huggingface.co/datasets" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> HuggingFace</a>
-            </div>
-          </div>
-
-          <div class="glass-card dataset-card">
-            <div class="dataset-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
-            <h3>LLMGuardBench</h3>
-            <div class="dataset-meta">
-              <span class="dataset-task">Safety Guard Evaluation</span>
-              <span class="dataset-downloads"><i data-lucide="download" style="width:12px;height:12px"></i> 1.5k</span>
-            </div>
-            <p>Benchmark dataset for evaluating LLM safety guard effectiveness across adversarial prompt scenarios.</p>
-            <div class="dataset-footer">
-              <span class="dataset-license">MIT</span>
-              <a href="https://huggingface.co/datasets" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> HuggingFace</a>
+              <span class="dataset-license">Open</span>
+              <a href="https://huggingface.co/datasets/fahadhafeezofficial/safecalib-bench" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> Open dataset</a>
             </div>
           </div>
 
@@ -477,55 +450,16 @@
 
           <div class="glass-card pub-card">
             <div class="pub-tags">
-              <span class="tag">Cybersecurity</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Benchmarking</span>
+              <span class="tag">Governance</span>
+              <span class="tag">AI Policy</span>
+              <span class="tag">Institutional Design</span>
             </div>
-            <h3>Significance-Aware Benchmarking of Classical Machine Learning Classifiers for Phishing Website Detection</h3>
+            <h3>Beyond Alignment: Governing the AI Transition through Redistributive, Institutional, and Normative Co-ordination</h3>
             <div class="pub-meta">
-              <span class="pub-venue">IEEE Access</span>
-              <span class="pub-year">2025</span>
-              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 3</span>
+              <span class="pub-venue">Submitted to Elsevier Technology in Society</span>
             </div>
             <div class="pub-links">
-              <a href="#" class="glass-button btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
-              <a href="#" class="glass-button btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
-            </div>
-          </div>
-
-          <div class="glass-card pub-card">
-            <div class="pub-tags">
-              <span class="tag">Cybersecurity</span>
-              <span class="tag">Transformers</span>
-              <span class="tag">Tabular Benchmarks</span>
-            </div>
-            <h3>Significance-Aware Evaluation of Classical and Transformer Classifiers Across Cybersecurity and Financial Tabular Benchmarks</h3>
-            <div class="pub-meta">
-              <span class="pub-venue">arXiv</span>
-              <span class="pub-year">2025</span>
-              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 2</span>
-            </div>
-            <div class="pub-links">
-              <a href="#" class="glass-button btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
-              <a href="#" class="glass-button btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
-            </div>
-          </div>
-
-          <div class="glass-card pub-card">
-            <div class="pub-tags">
-              <span class="tag">Mathematics</span>
-              <span class="tag">Linear Algebra</span>
-              <span class="tag">Education</span>
-            </div>
-            <h3>Geometric Intuitions for Linear Algebra: A Derivation-First Introduction for Machine Learning Practitioners</h3>
-            <div class="pub-meta">
-              <span class="pub-venue">arXiv</span>
-              <span class="pub-year">2025</span>
-              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
-            </div>
-            <div class="pub-links">
-              <a href="#" class="glass-button btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
-              <a href="#" class="glass-button btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/43143496/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
             </div>
           </div>
 
@@ -537,13 +471,25 @@
             </div>
             <h3>Dissecting Detection: Feature-Class Ablation and a Deployment-Aware Evaluation Metric for Static PE Malware Classifiers</h3>
             <div class="pub-meta">
-              <span class="pub-venue">arXiv</span>
-              <span class="pub-year">2025</span>
-              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
+              <span class="pub-venue">Submitted to Springer Nature Journal of Computer Virology and Hacking Techniques</span>
             </div>
             <div class="pub-links">
-              <a href="#" class="glass-button btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
-              <a href="#" class="glass-button btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/1161928025/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
+            </div>
+          </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">Mathematics</span>
+              <span class="tag">Linear Algebra</span>
+              <span class="tag">Education</span>
+            </div>
+            <h3>Geometric Intuitions for Linear Algebra: A Derivation-First Introduction for Machine Learning Practitioners</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">Submitted to Springer Nature Computer Science</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/1689088843/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
             </div>
           </div>
 
@@ -555,13 +501,56 @@
             </div>
             <h3>Linguistic Deception Signatures for Cross-Corpus Spam Detection with Classical NLP</h3>
             <div class="pub-meta">
-              <span class="pub-venue">arXiv</span>
-              <span class="pub-year">2025</span>
-              <span class="pub-citations"><i data-lucide="quote" style="width:12px;height:12px"></i> 1</span>
+              <span class="pub-venue">Submitted to Springer Nature International Journal of Machine Learning and Cybernetics</span>
             </div>
             <div class="pub-links">
-              <a href="#" class="glass-button btn-sm"><i data-lucide="file-text" style="width:12px;height:12px"></i> PDF</a>
-              <a href="#" class="glass-button btn-sm"><i data-lucide="link" style="width:12px;height:12px"></i> DOI</a>
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/1240447249/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
+            </div>
+          </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">Safety</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Benchmarking</span>
+            </div>
+            <h3>SafeCalib: Benchmarking Security-Critical Refusal Calibration in Instruction-Tuned Language Models</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">Submitted to Springer Nature Cybersecurity</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/313959534/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
+              <a href="https://huggingface.co/datasets/fahadhafeezofficial/safecalib-bench" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="database" style="width:12px;height:12px"></i> Dataset</a>
+            </div>
+          </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Benchmarking</span>
+            </div>
+            <h3>Significance-Aware Benchmarking of Classical Machine Learning Classifiers for Phishing Website Detection</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">Submitted to Springer Nature Evolutionary Intelligence</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/100297171/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
+            </div>
+          </div>
+
+          <div class="glass-card pub-card">
+            <div class="pub-tags">
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">Tabular Benchmarks</span>
+            </div>
+            <h3>Significance-Aware Evaluation of Classical and Transformer Classifiers Across Cybersecurity and Financial Tabular Benchmarks</h3>
+            <div class="pub-meta">
+              <span class="pub-venue">Submitted to Springer Nature Evolutionary Intelligence</span>
+            </div>
+            <div class="pub-links">
+              <a href="https://www.linkedin.com/in/fahadhafeezofficial/details/publications/edit/forms/100297171/?profileFormEntryPoint=Detail" class="glass-button btn-sm" target="_blank" rel="noopener"><i data-lucide="external-link" style="width:12px;height:12px"></i> View submission</a>
             </div>
           </div>
 
@@ -737,7 +726,7 @@
             <div class="tl-year">2025</div>
             <div class="tl-card glass-card">
               <h3>Published datasets</h3>
-              <p>Released CyberSecNER, TrustBench, LLMGuardBench and MedicalQA on Hugging Face for public experimentation.</p>
+              <p>Released cissp-llmbench and safecalib-bench on Hugging Face for public experimentation and benchmark evaluation.</p>
             </div>
           </div>
 
@@ -796,7 +785,8 @@
           <a href="mailto:fahadhafeez650@gmail.com" class="glass-card contact-btn"><i data-lucide="mail" style="width:18px;height:18px"></i> Email</a>
           <a href="https://github.com/Fahad-Hafeez" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="github" style="width:18px;height:18px"></i> GitHub</a>
           <a href="https://scholar.google.co.uk/citations?hl=en&user=JdYAmDYAAAAJ" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="graduation-cap" style="width:18px;height:18px"></i> Scholar</a>
-          <a href="https://huggingface.co/khwand-ai" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="smile" style="width:18px;height:18px"></i> HuggingFace</a>
+          <a href="https://huggingface.co/fahadhafeezofficial" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="smile" style="width:18px;height:18px"></i> HuggingFace</a>
+          <a href="https://orcid.org/0009-0003-7903-7382" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="id-card" style="width:18px;height:18px"></i> ORCID</a>
           <a href="https://www.linkedin.com/in/fahadhafeezofficial" class="glass-card contact-btn" target="_blank" rel="noopener"><i data-lucide="linkedin" style="width:18px;height:18px"></i> LinkedIn</a>
         </div>
       </div>
@@ -807,6 +797,7 @@
       <p>
         &copy; 2026 Fahad Hafeez &nbsp;&middot;&nbsp;
         <a href="https://github.com/Fahad-Hafeez" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+        <a href="https://orcid.org/0009-0003-7903-7382" target="_blank" rel="noopener">ORCID</a> &nbsp;&middot;&nbsp;
         <a href="https://www.linkedin.com/in/fahadhafeezofficial" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </footer>
@@ -816,9 +807,9 @@
       <h2>Fahad Hafeez — AI Researcher & Founder</h2>
       <p>Founder: Khwand AI</p>
       <p>Research Areas: Trustworthy AI, Cybersecurity, Large Language Models, Agentic AI, Federated Learning, Explainable AI</p>
-      <p>Datasets: CyberSecNER, MedicalQA, TrustBench, LLMGuardBench — published on Hugging Face</p>
+      <p>Datasets: cissp-llmbench and safecalib-bench — published on Hugging Face</p>
       <p>Projects: Khwand (AI-native CI/CD), 24syse (SaaS), Khwand-Agent, Khwand-RAG, CyberSecBench, TrustworthyLLM</p>
-      <p>Publications: Significance-Aware Benchmarking for Phishing Detection, Significance-Aware Evaluation of Classical and Transformer Classifiers, Geometric Intuitions for Linear Algebra, Dissecting Detection for PE Malware Classifiers, Linguistic Deception Signatures for Spam Detection</p>
+      <p>Publications: Beyond Alignment, Dissecting Detection, Geometric Intuitions for Linear Algebra, Linguistic Deception Signatures, SafeCalib, Significance-Aware Benchmarking for Phishing Detection, Significance-Aware Evaluation of Classical and Transformer Classifiers</p>
       <p>Open Source: pandas contribution (BYearEnd docstring), Khwand-Agent, Khwand-RAG, CyberSecBench, TrustworthyLLM</p>
       <p>Profiles: GitHub (Fahad-Hafeez), Google Scholar, HuggingFace (khwand-ai), ORCID (0009-0003-7903-7382), LinkedIn</p>
     </div>
