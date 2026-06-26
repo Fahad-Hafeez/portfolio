@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Host: fahad-hafeez.github.io
 Sitemap: https://fahad-hafeez.github.io/portfolio/sitemap.xml
