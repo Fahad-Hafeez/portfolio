@@ -49,8 +49,25 @@ if (navToggle && navLinks) {
 
 // ── Scroll progress bar ────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
+const progressTrack = document.getElementById('scroll-progress-track');
 // Tooltip element for showing percentage
 const progressTooltip = document.getElementById('scroll-tooltip');
+let isHoveringTrack = false;
+
+if (progressTrack) {
+  progressTrack.addEventListener('mouseenter', () => { isHoveringTrack = true; });
+  progressTrack.addEventListener('mouseleave', () => {
+    isHoveringTrack = false;
+    if (progressTooltip) progressTooltip.style.opacity = '0';
+  });
+  // Click on track to jump to that scroll position
+  progressTrack.addEventListener('click', (e) => {
+    const clickY = e.clientY;
+    const ratio = clickY / window.innerHeight;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo({ top: ratio * maxScroll, behavior: 'smooth' });
+  });
+}
 
 // ── Navbar scroll effect (transparent → glass) ─────────────
 const navbar = document.getElementById('navbar');
@@ -62,16 +79,17 @@ function updateScrollEffects() {
 
   if (progressBar) {
     const pct = Math.round(Math.min(progress, 100));
-    progressBar.style.width = `${pct}%`;
-    // Update tooltip text and position
+    // Bar fills from top of viewport downward
+    const barHeight = (pct / 100) * window.innerHeight;
+    progressBar.style.height = `${barHeight}px`;
+    // Update tooltip text and vertical position
     if (progressTooltip) {
       progressTooltip.textContent = `${pct}%`;
-      // Position tooltip centered over the current width of the bar
-      const barRect = progressBar.getBoundingClientRect();
-      const tooltipX = barRect.left + barRect.width / 2;
-      progressTooltip.style.left = `${tooltipX}px`;
-      // Show tooltip only when user has scrolled
-      progressTooltip.style.opacity = pct > 0 ? '1' : '0';
+      // Position tooltip beside the bar at the current fill point
+      const tooltipY = barHeight;
+      progressTooltip.style.top = `${tooltipY}px`;
+      // Show tooltip only when hovering the track area
+      progressTooltip.style.opacity = (isHoveringTrack && pct > 0) ? '1' : '0';
     }
   }
 
