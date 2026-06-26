@@ -47,12 +47,15 @@ if (navToggle && navLinks) {
   });
 }
 
-// ── Scroll progress bar ────────────────────────────────────
+// ── Scroll progress indicator (right-edge dot marker) ──────
 const progressBar = document.getElementById('scroll-progress');
 const progressTrack = document.getElementById('scroll-progress-track');
-// Tooltip element for showing percentage
+const scrollMarker = document.getElementById('scroll-marker');
 const progressTooltip = document.getElementById('scroll-tooltip');
 let isHoveringTrack = false;
+
+// Rail padding (matches CSS top/bottom of 24px)
+const RAIL_PAD = 24;
 
 if (progressTrack) {
   progressTrack.addEventListener('mouseenter', () => { isHoveringTrack = true; });
@@ -63,7 +66,8 @@ if (progressTrack) {
   // Click on track to jump to that scroll position
   progressTrack.addEventListener('click', (e) => {
     const clickY = e.clientY;
-    const ratio = clickY / window.innerHeight;
+    const railH = window.innerHeight - RAIL_PAD * 2;
+    const ratio = Math.max(0, Math.min(1, (clickY - RAIL_PAD) / railH));
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     window.scrollTo({ top: ratio * maxScroll, behavior: 'smooth' });
   });
@@ -79,16 +83,19 @@ function updateScrollEffects() {
 
   if (progressBar) {
     const pct = Math.round(Math.min(progress, 100));
-    // Bar fills from top of viewport downward
-    const barHeight = (pct / 100) * window.innerHeight;
-    progressBar.style.height = `${barHeight}px`;
-    // Update tooltip text and vertical position
+    const railH = window.innerHeight - RAIL_PAD * 2;
+    // Filled rail height (top → current position)
+    const fillH = (pct / 100) * railH;
+    progressBar.style.height = `${fillH}px`;
+    // Dot marker position
+    const dotY = RAIL_PAD + fillH;
+    if (scrollMarker) {
+      scrollMarker.style.top = `${dotY - 6}px`; // 6 = half dot size
+    }
+    // Tooltip text and position
     if (progressTooltip) {
       progressTooltip.textContent = `${pct}%`;
-      // Position tooltip beside the bar at the current fill point
-      const tooltipY = barHeight;
-      progressTooltip.style.top = `${tooltipY}px`;
-      // Show tooltip only when hovering the track area
+      progressTooltip.style.top = `${dotY}px`;
       progressTooltip.style.opacity = (isHoveringTrack && pct > 0) ? '1' : '0';
     }
   }

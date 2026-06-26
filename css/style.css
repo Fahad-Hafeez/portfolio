@@ -129,47 +129,64 @@ a:hover { color: var(--primary); }
   border-radius: var(--radius-sm);
 }
 
-/* ── Vertical scroll progress indicator (right edge) ── */
+/* ── Vertical scroll progress indicator (right edge dot marker) ── */
 #scroll-progress-track {
   position: fixed;
   top: 0;
   right: 0;
-  width: 20px;
+  width: 24px;
   height: 100vh;
   background: transparent;
   z-index: 300;
   cursor: pointer;
 }
 
+/* Thin vertical rail line */
 #scroll-progress-track::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 8px;
-  width: 4px;
-  height: 100%;
+  top: 24px;
+  bottom: 24px;
+  right: 11px;
+  width: 2px;
   background: var(--border);
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
+/* Filled portion of the rail (top → current position) */
 #scroll-progress {
   position: fixed;
-  top: 0;
-  right: 8px;
-  width: 4px;
+  top: 24px;
+  right: 11px;
+  width: 2px;
   height: 0;
   z-index: 301;
   background: linear-gradient(180deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 10px var(--primary-glow);
-  border-radius: 4px;
+  border-radius: 2px;
   transition: none;
   pointer-events: none;
+}
+
+/* Moving dot marker on the rail */
+#scroll-marker {
+  position: fixed;
+  right: 6px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  z-index: 302;
+  background: var(--primary);
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary-glow), 0 0 20px var(--primary-glow);
+  pointer-events: none;
+  transition: none;
 }
 
 /* Tooltip for scroll progress — appears on hover near the right edge */
 #scroll-tooltip {
   position: fixed;
-  right: 28px;
+  right: 32px;
   top: 0;
   padding: 4px 10px;
   font-size: 0.72rem;
@@ -188,9 +205,32 @@ a:hover { color: var(--primary); }
   white-space: nowrap;
 }
 
+/* Connector line from tooltip to dot */
+#scroll-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 1px;
+  background: var(--border);
+}
+
 /* Show tooltip when hovering the track area (JS also controls this) */
 #scroll-progress-track:hover ~ #scroll-tooltip {
   opacity: 1;
+}
+#scroll-progress-track:hover ~ #scroll-marker {
+  box-shadow: 0 0 12px var(--primary-glow), 0 0 28px var(--primary-glow);
+}
+
+/* Light theme overrides for scroll indicator */
+.light #scroll-marker {
+  border-color: var(--bg);
+}
+.light #scroll-progress-track::before {
+  background: var(--border);
 }
 
 /* 04. Utility Classes */
@@ -1776,6 +1816,7 @@ header#home .hero-right {
 @media (max-width: 480px) {
   #scroll-progress-track,
   #scroll-progress,
+  #scroll-marker,
   #scroll-tooltip {
     display: none;
   }
