@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Blog page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/blog.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Publications page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/publications.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Research page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/#research</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Datasets page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/#datasets</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Projects page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/#projects</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Open Source page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/#opensource</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Contact page -->
+  <url>
+    <loc>https://fahad-hafeez.github.io/portfolio/#contact</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
